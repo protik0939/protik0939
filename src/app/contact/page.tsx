@@ -8,6 +8,13 @@ import Image from "next/image";
 import Scrollbars from "rc-scrollbars";
 import { IoLogoWhatsapp, IoMailOutline } from "react-icons/io5";
 import { AiOutlineLinkedin, AiOutlineSkype } from "react-icons/ai";
+import { CiFacebook } from "react-icons/ci";
+import { PiGithubLogoThin, PiInstagramLogoThin, PiLastfmLogoThin, PiPinterestLogoThin, PiRedditLogoThin, PiSnapchatLogoThin, PiSpotifyLogoThin, PiTelegramLogoThin, PiTwitchLogoThin, PiYoutubeLogoThin } from "react-icons/pi";
+import { RiTwitterXLine } from "react-icons/ri";
+import { LiaDeviantart } from "react-icons/lia";
+import { DiYahoo } from "react-icons/di";
+import { SlSocialVkontakte } from "react-icons/sl";
+import { TbBrandUnsplash } from "react-icons/tb";
 
 export default function page() {
 
@@ -38,12 +45,9 @@ export default function page() {
           className="grid w-full p-10 sm:p-5 grid-flow-dense grid-cols-12 gap-4"
         >
           <HeaderBlock />
-          <SocialsBlock />
+          <Ewls />
           <AboutBlock />
-          <SocialsBlock />
-          <SocialsBlock />
-          <SocialsBlock />
-          <SocialsBlock />
+          <Others />
           <LocationBlock />
           <EmailListBlock />
         </motion.div>
@@ -113,7 +117,7 @@ const HeaderBlock = () => (
   </Block>
 );
 
-const SocialsBlock = () => (
+const Ewls = () => (
   <>
     <Block
       whileHover={{
@@ -177,6 +181,260 @@ const SocialsBlock = () => (
   </>
 );
 
+
+const Others = () => (
+  <>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.facebook.com/protik0939"}
+        target='_blank'
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <CiFacebook className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://twitter.com/Protik0939"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <RiTwitterXLine className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={""}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiGithubLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.instagram.com/protik0939/"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiInstagramLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+
+
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://t.me/protik0939"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiTelegramLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.snapchat.com/add/protik0939"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiSnapchatLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.reddit.com/user/protik3909"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiRedditLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.deviantart.com/protik0939"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <LiaDeviantart className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+
+
+
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.youtube.com/@golpro6887"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiYoutubeLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.last.fm/user/protik3909"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiLastfmLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://unsplash.com/@protik0939/"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <TbBrandUnsplash className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://open.spotify.com/user/y2kwnyevgdz38p6a06v38u2lu"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiSpotifyLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+
+
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.pinterest.com/protik0939/"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiPinterestLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"mailto:protik0939@yahoo.com"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <DiYahoo className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "-2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://vk.com/protik0939"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <SlSocialVkontakte className="group-hover:shadow-xl group-hover:scale-[5] group-hover:rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+    <Block
+      whileHover={{
+        rotate: "2.5deg",
+        scale: 1.1,
+      }}
+      className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
+    >
+      <Link
+        href={"https://www.twitch.tv/settings/profile"}
+        target="_blank"
+        className="grid h-full place-content-center text-3xl text-white"
+      >
+        <PiTwitchLogoThin className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+      </Link>
+    </Block>
+
+  </>
+);
+
 const AboutBlock = () => (
   <Block className="col-span-12 text-3xl leading-snug">
     <p className="text-center">
@@ -188,7 +446,7 @@ const AboutBlock = () => (
 const LocationBlock = () => (
   <Block className="col-span-12 flex flex-col items-center gap-4 bgg:col-span-3">
     <FiMapPin className="text-3xl" />
-    <p className="text-center text-lg text-zinc-400">Cyberspace</p>
+    <p className="text-center text-lg text-zinc-400">Dhaka, Bangladesh</p>
   </Block>
 );
 

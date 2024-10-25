@@ -5,11 +5,23 @@ import { twMerge } from "tailwind-merge";
 import { TCardProps } from "@/models/typeScript";
 
 export default function page() {
+
+
+  const fadeInVariant = {
+    hidden: { opacity: 0, filter: 'blur(10px)' },
+    visible: { opacity: 1, filter: 'blur(0px)' }
+  };
+
   return (
     <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-none">
-      <h2 className="relative z-0 text-[20vw] font-black text-neutral-800/40 md:text-[200px]">
+      <motion.h2
+        initial="hidden"
+        animate="visible"
+        variants={fadeInVariant}
+        transition={{ delay: .1, duration: 1 }}
+        className="relative z-0 text-[20vw] font-black text-neutral-800/40 md:text-[200px]">
         Hobbies
-      </h2>
+      </motion.h2>
       <Cards />
     </section>
   );
@@ -17,6 +29,7 @@ export default function page() {
 
 const Cards = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
+
 
   return (
     <div className="absolute inset-0 z-10" ref={containerRef}>
@@ -109,6 +122,12 @@ const Card = ({
     setZIndex(maxZIndex + 1);
   };
 
+
+  const zoomInVariants = {
+    hidden: { opacity: 0, filter: 'blur(10px)', scale: 0 },
+    visible: { opacity: 1, filter: 'blur(0px)', scale: 1.0 }
+  };
+
   return (
     <motion.img
       onMouseDown={updateZIndex}
@@ -118,6 +137,12 @@ const Card = ({
         rotate,
         zIndex,
       }}
+
+      initial="hidden"
+      animate="visible"
+      variants={zoomInVariants}
+      transition={{ delay: .1, duration: 1 }}
+
       className={twMerge(
         "drag-elements absolute w-48 bg-neutral-200 p-1 pb-4",
         className

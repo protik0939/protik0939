@@ -31,12 +31,12 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="https://images.unsplash.com/photo-1576174464184-fb78fe882bfd?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-        alt="Example image"
+        src="/hobby/football.webp"
+        alt="Playing Football"
         rotate="12deg"
         top="45%"
         left="60%"
-        className="w-24 md:w-48"
+        className="w-72 md:w-96"
       />
       <Card
         containerRef={containerRef}
@@ -45,7 +45,7 @@ const Cards = () => {
         rotate="-6deg"
         top="20%"
         left="40%"
-        className="w-52 md:w-80"
+        className="w-48 md:w-72"
       />
       <Card
         containerRef={containerRef}

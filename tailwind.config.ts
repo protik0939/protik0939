@@ -10,6 +10,7 @@ const config: Config = {
   theme: {
     screens: {
       'sm': { 'min': '0px', 'max': '600px' },
+      'bgg': { 'min': '601px', 'max': '100000000px' },
     },
     extend: {
       colors: {

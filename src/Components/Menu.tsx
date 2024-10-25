@@ -51,11 +51,11 @@ export default function Menu() {
 
   return (
     <div>
-      <div className={`fixed transition-all duration-500  ${showMenu ? 'bottom-20' : 'bottom-0'} z-50 w-full flex justify-center items-center`}>
+      <div className={`fixed transition-all duration-500  ${showMenu ? 'bottom-20' : 'bottom-0 pointer-events-none'} z-50 w-full flex justify-center items-center`}>
         <div className='relative flex justify-center items-center'>
           <div ref={menuRef} className='relative w-40 h-32'>
 
-            <button onClick={() => setShowMenu(!showMenu)} className={`z-50 absolute cursor-pointer p-2 rounded-full border  text-xl left-1/2 top-1/2 hover:shadow-2xl hover:scale-110 hover:shadow-white transform transition-all duration-500 ${showMenu ? '-translate-x-1/2 -translate-y-1/2 rotate-180 border-[#ff0000] bg-[#ff0000]/20 scale-75 text-[#ff0000]' : '-translate-x-1/2 -translate-y-1/2 border-white bg-white/20 text-white'}`} >
+            <button onClick={() => setShowMenu(!showMenu)} className={`z-50 absolute cursor-pointer p-2 rounded-full border pointer-events-auto  text-xl left-1/2 top-1/2 hover:shadow-2xl hover:scale-110 hover:shadow-white transform transition-all duration-500 ${showMenu ? '-translate-x-1/2 -translate-y-1/2 rotate-180 border-[#ff0000] bg-[#ff0000]/20 scale-75 text-[#ff0000]' : '-translate-x-1/2 -translate-y-1/2 border-white bg-white/20 text-white'}`} >
               {showMenu ? <IoMdClose /> : <TiThMenu />}
             </button>
 

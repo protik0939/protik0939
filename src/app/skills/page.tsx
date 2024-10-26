@@ -1,7 +1,12 @@
 import React from 'react'
+import Projects from './(components)/Projects'
+import LanguagesIKnow from './(components)/LanguagesIKnow'
 
 export default function page() {
   return (
-    <div>This is Projects page</div>
+    <div>
+      <LanguagesIKnow />
+      <Projects />
+    </div>
   )
 }

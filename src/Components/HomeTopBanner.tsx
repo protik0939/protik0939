@@ -1,7 +1,6 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
-import ShuffleText from 'react-shuffle-text'
 import Image from 'next/image';
 import ptk from '../../public/protikWOutBgg.webp'
 import { GrProjects } from "react-icons/gr";
@@ -9,6 +8,9 @@ import { GiGraduateCap } from "react-icons/gi";
 import { TiInfoLargeOutline } from "react-icons/ti";
 import { CgFeed } from "react-icons/cg";
 import { topBarData } from '@/models/jsonData';
+import dynamic from 'next/dynamic';
+
+const ShuffleText = dynamic(() => import('react-shuffle-text'), { ssr: false });
 
 export default function HomeTopBanner() {
 

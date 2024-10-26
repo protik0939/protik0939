@@ -7,9 +7,9 @@ import { CgFeed } from 'react-icons/cg'
 import { RiFlowerLine } from 'react-icons/ri'
 import { TbFileCv } from 'react-icons/tb'
 import { IoMdClose } from 'react-icons/io'
-import ParticlesBg from 'particles-bg';
 import Link from 'next/link'
-
+import dynamic from 'next/dynamic'
+const ParticlesBg = dynamic(() => import('particles-bg'), { ssr: false });
 
 export default function Menu() {
 
@@ -97,7 +97,7 @@ export default function Menu() {
 
       </div>
 
-      <ParticlesBg type="custom" config={config} bg={true} />
+      {ParticlesBg && <ParticlesBg type="custom" config={config} bg={true} />}
     </div>
   )
 }

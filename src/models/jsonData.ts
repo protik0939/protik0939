@@ -165,3 +165,252 @@ export const projectsInfo = [
         pMaterials: ['Html', 'CSS', 'Javascript'],
     },
 ]
+
+export const skillData = [
+    {
+        id: 'pl1',
+        title: 'Programming Languages',
+        sdInfos: [
+            {
+                id: 'cprogramming',
+                name: 'C',
+                logo: '/langlogo/c.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'cppprogramming',
+                name: 'C++',
+                logo: '/langlogo/cpp.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'javaprogramming',
+                name: 'Java',
+                logo: '/langlogo/java.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'javascriptprogramming',
+                name: 'JavaScript',
+                logo: '/langlogo/javascript.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'pythonprogramming',
+                name: 'Python',
+                logo: '/langlogo/python.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+    {
+        id: 'msl2',
+        title: 'Markup/Styling Languages',
+        sdInfos: [
+            {
+                id: 'html',
+                name: 'HTML',
+                logo: '/langlogo/html.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'css',
+                name: 'CSS',
+                logo: '/langlogo/css.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+    {
+        id: 'dtbs3',
+        title: 'Databases',
+        sdInfos: [
+            {
+                id: 'mysql',
+                name: 'MySql',
+                logo: '/langlogo/mysql.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'mongodb',
+                name: 'MongoDB',
+                logo: '/langlogo/mongodb.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+    {
+        id: 'lbrsfrms4',
+        title: 'Libraries/Frameworks',
+        sdInfos: [
+            {
+                id: 'react',
+                name: 'React',
+                logo: '/langlogo/react.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'nodejs',
+                name: 'Node JS',
+                logo: '/langlogo/nodejs.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'Express JS',
+                name: 'MySql',
+                logo: '/langlogo/expressjs.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'Tailwind CSS',
+                name: 'MySql',
+                logo: '/langlogo/tailwindcss.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'Next JS',
+                name: 'MySql',
+                logo: '/langlogo/nextjs.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+    {
+        id: 'tcnolgy5',
+        title: 'Technologies',
+        sdInfos: [
+            {
+                id: 'pwa',
+                name: 'PWA',
+                logo: '/langlogo/pwa.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'jwt',
+                name: 'JWT',
+                logo: '/langlogo/jwt.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'axios',
+                name: 'Axios',
+                logo: '/langlogo/axios.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+    {
+        id: 'platforms6',
+        title: 'Platforms',
+        sdInfos: [
+            {
+                id: 'blogger',
+                name: 'Blogger',
+                logo: '/langlogo/blogger.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'firebase',
+                name: 'Firebase',
+                logo: '/langlogo/fireBase.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'Vercel',
+                name: 'MongoDB',
+                logo: '/langlogo/vercel.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+    {
+        id: 'others7',
+        title: 'Others',
+        sdInfos: [
+            {
+                id: 'figma',
+                name: 'Figma',
+                logo: '/langlogo/others/figma.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'adobephotoshop',
+                name: 'Adobe Photoshop',
+                logo: '/langlogo/others/photoshop.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'adobepremierepro',
+                name: 'Adobe Premiere Pro',
+                logo: '/langlogo/others/premierepro.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'adobeaudition',
+                name: 'Adobe Audition',
+                logo: '/langlogo/others/audition.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'adobeillustrator',
+                name: 'Adobe Illustrator',
+                logo: '/langlogo/others/illustrator.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'adobeaftereffects',
+                name: 'Adobe After Effects',
+                logo: '/langlogo/others/aftereffects.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'msword',
+                name: 'MS Word',
+                logo: '/langlogo/others/msword.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'mspowerpoint',
+                name: 'MS PowerPoint',
+                logo: '/langlogo/others/mspowerpoint.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'googledocs',
+                name: 'Google Docs',
+                logo: '/langlogo/others/googledocs.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'googleforms',
+                name: 'Google Forms',
+                logo: '/langlogo/others/googleforms.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'googlesheets',
+                name: 'Google Sheets',
+                logo: '/langlogo/others/googlesheets.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'googlesites',
+                name: 'Google Sites',
+                logo: '/langlogo/others/googlesites.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'googleslides',
+                name: 'Google Slides',
+                logo: '/langlogo/others/googleslides.webp',
+                percentage: '100%',
+            },
+            {
+                id: 'filmora',
+                name: 'Filmora',
+                logo: '/langlogo/others/filmora.webp',
+                percentage: '100%',
+            },
+        ],
+    },
+]

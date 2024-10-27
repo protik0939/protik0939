@@ -1,11 +1,10 @@
 'use client'
-import React, { CSSProperties } from "react";
+import React from "react";
 import { MotionProps, motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import Link from 'next/link'
 import Image from "next/image";
-import Scrollbars from "rc-scrollbars";
 import { IoLogoWhatsapp, IoMailOutline } from "react-icons/io5";
 import { AiOutlineLinkedin, AiOutlineSkype } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
@@ -19,23 +18,12 @@ import { TbBrandUnsplash } from "react-icons/tb";
 export default function page() {
 
 
-  const renderThumb = ({ style, ...props }: { style: CSSProperties }) => {
-    const thumbStyle: CSSProperties = {
-      backgroundColor: '#ffffff50', // Change this to the desired color (example: indigo-600)
-      borderRadius: '4px',
-    };
-    return <div style={{ ...style, ...thumbStyle }} {...props} />;
-  };
+
 
 
   return (
-    <div className="h-screen w-full text-zinc-50">
-      <Scrollbars
-        style={{ width: '100%', height: '100%' }}
-        autoHide
-        renderThumbHorizontal={renderThumb}
-        renderThumbVertical={renderThumb}
-      >
+    <div className="h-screen w-full text-zinc-50 overflow-hidden">
+      <div className="w-full h-full overflow-auto">
         <motion.div
           initial="initial"
           animate="animate"
@@ -51,7 +39,7 @@ export default function page() {
           <LocationBlock />
           <EmailListBlock />
         </motion.div>
-      </Scrollbars>
+      </div>
     </div>
   );
 };

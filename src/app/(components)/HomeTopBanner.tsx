@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import Image from 'next/image';
-import ptk from '../../public/protikWOutBgg.webp'
+import ptk from '../../../public/protikWOutBgg.webp'
 import { GrProjects } from "react-icons/gr";
 import { GiGraduateCap } from "react-icons/gi";
 import { TiInfoLargeOutline } from "react-icons/ti";

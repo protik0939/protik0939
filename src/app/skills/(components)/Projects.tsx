@@ -1,13 +1,26 @@
+'use client'
 import Titles from '@/Components/Titles'
 import { projectsInfo } from '@/models/jsonData'
 import Link from 'next/link'
 import React from 'react'
 import './skills.css'
 import { TbExternalLink } from 'react-icons/tb'
+import { motion } from "framer-motion";
 
 export default function Projects() {
+
+    const fadeInVariant = {
+        hidden: { opacity: 0, filter: 'blur(10px)' },
+        visible: { opacity: 1, filter: 'blur(0px)' }
+    };
+
     return (
-        <div>
+        <motion.div
+            initial="hidden"
+            animate="visible"
+            variants={fadeInVariant}
+            transition={{ duration: 1 }}
+        >
             <Titles title={'Projects By me'} />
             <div className='w-full p-10 sm:p-4 flex flex-wrap'>
                 {
@@ -46,6 +59,6 @@ export default function Projects() {
                     })
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }

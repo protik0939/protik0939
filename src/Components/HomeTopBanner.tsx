@@ -71,7 +71,8 @@ export default function HomeTopBanner() {
                         alt='Protik'
                         width={344}
                         height={533}
-                        className=''
+                        className='w-auto h-auto'
+                        priority={true}
                     />}
                 </animated.div>
             </div>

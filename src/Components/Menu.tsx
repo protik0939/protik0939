@@ -32,14 +32,14 @@ export default function Menu() {
 
 
   const config = {
-    num: [20, 30],
+    num: [40, 70],
     rps: 0.1,
     radius: [.1, 1],
     life: [1.5, 3],
     v: [.4, .8],
     tha: [-40, 40],
     alpha: [0.6, 0],
-    scale: [1, 0.1],
+    scale: [2, 0.1],
     position: "all",
     color: ["#ffffff"],
     type: "lines",

@@ -19,4 +19,16 @@ export interface TEducationData {
     iImage: string;
     iLogo: string;
     iDetails: string;
-  }
+}
+
+
+export interface TBlogPost {
+    _id: string;
+    title: string;
+    author: string;
+    uploadTime: string; // ISO date string
+    timeToRead: string;
+    fullDetails: string;
+    tags: string[];
+    imageSource: string;
+}

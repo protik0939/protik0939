@@ -5,7 +5,7 @@ import { Baloo_Da_2 } from 'next/font/google'
 import Head from "next/head";
 
 export const metadata: Metadata = {
-  title: "Sadat Alam Protik",
+  title: "Home | Sadat Alam Protik",
   description: "Oh, oh woe-oh-woah is me 🖤😉",
 };
 

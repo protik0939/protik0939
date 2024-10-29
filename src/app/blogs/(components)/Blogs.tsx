@@ -1,5 +1,5 @@
 'use client'
-import Titles from '@/Components/Titles'
+import Titles from '@/app/(components)/Titles'
 import { blogPost } from '@/models/jsonData'
 import Image from 'next/image'
 import React from 'react'

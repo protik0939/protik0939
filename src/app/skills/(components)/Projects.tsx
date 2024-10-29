@@ -1,5 +1,5 @@
 'use client'
-import Titles from '@/Components/Titles'
+import Titles from '@/app/(components)/Titles'
 import { projectsInfo } from '@/models/jsonData'
 import Link from 'next/link'
 import React from 'react'

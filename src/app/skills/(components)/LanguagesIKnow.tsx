@@ -1,4 +1,4 @@
-import Titles from '@/Components/Titles'
+import Titles from '@/app/(components)/Titles'
 import React from 'react'
 import SkillSet from './SkillSet'
 

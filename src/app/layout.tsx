@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Menu from "@/Components/Menu";
+import Menu from "@/app/(components)/Menu";
 import { Baloo_Da_2 } from 'next/font/google'
 import Head from "next/head";
 

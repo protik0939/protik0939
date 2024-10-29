@@ -14,7 +14,7 @@ const ShuffleText = dynamic(() => import('react-shuffle-text'), { ssr: false });
 
 export default function HomeTopBanner() {
 
-    const [mounted, setMounted] = useState(false); // State to check if component is mounted
+    const [mounted, setMounted] = useState(false);
 
     const [showText1, setShowText1] = useState(false);
     const [showText2, setShowText2] = useState(false);

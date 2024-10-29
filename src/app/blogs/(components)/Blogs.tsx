@@ -40,7 +40,7 @@ export default function Blogs() {
                         className='w-full h-full border border-white border-b-0 rounded-t-2xl '
                       />
                     </figure>
-                    <div className="card-body bg-[#ffffff05] rounded-b-2xl border border-white border-t-0">
+                    <div className="card-body bg-[#ffffff05] backdrop-blur-sm rounded-b-2xl border border-white border-t-0">
                       <h2 className="card-title text-s">{b.title}</h2>
                       <p className='text-xs'>{b.fullDetails.slice(0, 50)}{b.fullDetails.length > 50 && '...'}</p>
                       <div className="card-actions justify-end">

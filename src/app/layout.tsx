@@ -30,6 +30,7 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
+        <meta name="google-site-verification" content="eIF-DBTlpUgbA88_sV07lhJiT8iX_luc8VqUGSfG8lc" />
       </Head>
       <body
         className={` ${balooDaTwo.variable} antialiased`} >

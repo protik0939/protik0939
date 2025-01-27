@@ -45,6 +45,19 @@ export const eduData = [
 
 export const projectsInfo = [
     {
+        pId: 'w3university',
+        pTitle: 'W3University',
+        pImgSrc: '/projectsss/w3university.webp',
+        pType: 'HTML CSS Learning Platform',
+        pLevel: 'Intermediate',
+        pLink: 'https://protik0939.github.io/W3University/',
+        pDetails: 'W3University is an educational platform designed to help users learn coding, focusing primarily on HTML. It offers a comprehensive range of tutorials and resources to assist both beginners and experienced developers in enhancing their web development skills. This project was made for my university Software Project course and the project was developed by me and my friends.',
+        pMaterials: ['html', 'css', 'javascriptprogramming'],
+        pCategory: 'Collaborative Project',
+        pMembers: ['protik0939', 'jubairaminsiyum', 'ishmakrahatrafi', 'hasanjarif', 'shakib'],
+        pLogo: '/projectsss/logos/W3University.svg',
+    },
+    {
         pId: 'alphaoneeducation',
         pTitle: 'Alphaone Education Consultancy',
         pImgSrc: '/projectsss/alphaone.webp',
@@ -52,7 +65,10 @@ export const projectsInfo = [
         pLevel: 'Expert',
         pLink: 'https://alphaoneedu.com/',
         pDetails: 'This project is made for Alphaone Education Consultancy where users can see about them and can apply for their consultancy.',
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'Node JS', 'Express JS', 'Firebase', 'MongoDB', 'Hostinger', 'Vercel', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'nodejs', 'expressjs', 'mongodb', 'hostinger', 'vercel', 'tailwindcss'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/alphaoneedu.svg',
     },
     {
         pId: 'csepdiu',
@@ -62,7 +78,10 @@ export const projectsInfo = [
         pLevel: 'Advance',
         pLink: 'https://cse-p-diu.web.app/',
         pDetails: 'This project is a Social media and others online tools for studenta platforms that I made for my university section. Only students/teachers of our university can login here.',
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'Node JS', 'Express JS', 'Firebase', 'MongoDB', 'Vercel', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'nodejs', 'expressjs', 'firebase', 'mongodb', 'vercel', 'tailwindcss'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/csepdiu.svg',
     },
     {
         pId: 'fcpredators',
@@ -72,7 +91,10 @@ export const projectsInfo = [
         pLevel: 'Advance',
         pLink: 'https://fcpredators.web.app/',
         pDetails: 'This project is a Portal on my childhood friends with whom we used to play football and created a club named FC Predators. I spent the best times of my life with them!',
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'Firebase', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'firebase', 'tailwindcss'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/fcplogo.svg',
     },
     {
         pId: 'batterylowinteractiveclone',
@@ -82,7 +104,10 @@ export const projectsInfo = [
         pLevel: 'Intermediate',
         pLink: 'https://batterylowinteractiveclone.netlify.app/',
         pDetails: "In the beginning of my react development journey, I made a clone of a popular Bangladeshi Tech Company, Battery Low Interactive's Clone",
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'tailwindcss', 'netlify'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/blilogo.png',
     },
     {
         pId: 'studentinfo',
@@ -92,7 +117,10 @@ export const projectsInfo = [
         pLevel: 'Beginner',
         pLink: 'https://students-info-star-unstar.netlify.app/',
         pDetails: "This is just a basic website marking students as star and unstar nothing else",
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'tailwindcss', 'netlify'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: null,
     },
     {
         pId: 'worldtour',
@@ -102,7 +130,10 @@ export const projectsInfo = [
         pLevel: 'Beginner',
         pLink: 'https://worlrtourbyprotik.netlify.app',
         pDetails: "An website to show information of all the countries accross world. Some other functionalities are also there but not much well organized. Used Rest API for country data",
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'tailwindcss', 'netlify'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: null,
     },
     {
         pId: 'weatherupdate',
@@ -112,7 +143,10 @@ export const projectsInfo = [
         pLevel: 'Beginner',
         pLink: 'https://weatherinfoofsomeplaces.netlify.app',
         pDetails: "Here some country's weather info will be shown live and we can switch between places. It's a very basic project which I made in the begining of my React Framework learning journey.",
-        pMaterials: ['Html', 'CSS', 'Javascript', 'React', 'TailwindCSS'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'react', 'tailwindcss', 'netlify'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: null,
     },
     {
         pId: 'portfolio',
@@ -122,7 +156,10 @@ export const projectsInfo = [
         pLevel: 'Intermediate',
         pLink: 'https://protik0939.blogspot.com/',
         pDetails: "This one is my first portfolio made using plain html css javascript on Blogger.",
-        pMaterials: ['Html', 'CSS', 'Javascript', 'Blogger'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'blogger'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/protik0939.png',
     },
     {
         pId: 'golprobd',
@@ -132,7 +169,10 @@ export const projectsInfo = [
         pLevel: 'Intermediate',
         pLink: 'https://golprobd.blogspot.com',
         pDetails: "Feeling boared? Read stories and other contents by me on my online Magazine type OTT. It's one of my starting project of HTML CSS Journey.",
-        pMaterials: ['Html', 'CSS', 'Javascript', 'Blogger'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'blogger'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/golproLogoSvg.svg',
     },
     {
         pId: 'csepdiuold',
@@ -142,7 +182,10 @@ export const projectsInfo = [
         pLevel: 'Intermediate',
         pLink: 'https://csepdiu.blogspot.com/',
         pDetails: '(Its the old version of above CSE P DIU) This project is a Social media and others online tools for studenta platforms that I made for my university section. Only students/teachers of our university can login here.',
-        pMaterials: ['Html', 'CSS', 'Javascript', 'Blogger'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'blogger'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/csepdiu.svg',
     },
     {
         pId: 'fcpredatorsold',
@@ -152,7 +195,10 @@ export const projectsInfo = [
         pLevel: 'Intermediate',
         pLink: 'https://fc-predators.blogspot.com/',
         pDetails: '(Its the old version of above FC Predators) This project is a Portal on my childhood friends with whom we used to play football and created a club named FC Predators. I spent the best times of my life with them!',
-        pMaterials: ['Html', 'CSS', 'Javascript', 'Blogger'],
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'blogger'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/fcplogo.svg',
     },
     {
         pId: 'abcbank',
@@ -162,7 +208,10 @@ export const projectsInfo = [
         pLevel: 'Novice',
         pLink: 'https://protik0939.github.io/ABC-Bank/',
         pDetails: "This one is so basic project when I've learnt Javascriptly deeply. Oh one think, here user protik0939@gmail.com and pass 12345",
-        pMaterials: ['Html', 'CSS', 'Javascript'],
+        pMaterials: ['html', 'css', 'javascriptprogramming'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: null,
     },
 ]
 
@@ -320,6 +369,18 @@ export const skillData = [
                 name: 'Vercel',
                 logo: '/langlogo/vercel.webp',
                 percentage: '70',
+            },
+            {
+                id: 'hostinger',
+                name: 'Hostinger',
+                logo: '/langlogo/hostinger.webp',
+                percentage: '40',
+            },
+            {
+                id: 'netlify',
+                name: 'Netlify',
+                logo: '/langlogo/netlify.webp',
+                percentage: '80',
             },
         ],
     },
@@ -516,5 +577,33 @@ export const blogPost = [
         "fullDetails": "In an era where digital technology drives both personal and professional life, cybersecurity has become essential. With a surge in cyber threats like hacking, phishing, and ransomware, safeguarding personal and organizational data is crucial. Effective cybersecurity strategies can protect sensitive information, minimize potential damages, and secure digital interactions. Key strategies to achieve this include encryption, multi-factor authentication, regular software updates, employee training, and incident response planning.\n\nEncryption is a fundamental strategy that protects data by converting it into unreadable formats for unauthorized users. Both personal and organizational data, whether stored or in transit, can benefit from encryption, making it highly challenging for attackers to exploit. Most companies employ encryption protocols like SSL/TLS for data transmission and AES for data storage. For individuals, using encrypted messaging services and securing personal devices with encryption-enabled applications adds an extra layer of security. In the event of a breach, encrypted data is far less useful to attackers, reducing the risk of sensitive information exposure.\n\nMulti-factor authentication (MFA) is another essential security measure. Relying solely on passwords is often insufficient, as passwords can be guessed, stolen, or cracked. MFA requires users to verify their identity through multiple forms—such as a password, fingerprint, or one-time code sent to a mobile device. By requiring two or more forms of authentication, MFA makes it significantly harder for unauthorized users to access sensitive systems or accounts, offering strong protection against breaches.\n\nRegular software updates and patches are also vital. Cybercriminals often exploit known vulnerabilities in software to gain unauthorized access. Regularly updating operating systems, applications, and firmware reduces these risks by addressing security flaws promptly. Many organizations adopt centralized patch management to ensure that all devices on the network are up-to-date, significantly decreasing the risk of exploitation. Individuals can practice similar diligence by enabling automatic updates on personal devices to stay secure.\n\nFor organizations, employee training is crucial, as human error is a leading cause of data breaches. Phishing attacks, in which attackers masquerade as trustworthy entities to steal sensitive information, can often be thwarted through awareness. Training employees to recognize suspicious emails, links, and attachments can reduce the likelihood of successful phishing attempts. By instilling good cybersecurity habits, organizations can build a more resilient defense against common cyber threats.\n\nAn incident response plan (IRP) is another key strategy that prepares organizations to respond to cyber incidents swiftly and effectively. An IRP outlines procedures for identifying, containing, and eradicating threats and includes steps to recover from attacks with minimal impact. This proactive approach allows organizations to react quickly and limit damage, reducing the risk of prolonged data loss, downtime, and reputational harm. Regularly testing and updating the IRP ensures that the response remains relevant in the face of evolving cyber threats.\n\nIn conclusion, as digital reliance grows, so does the need for comprehensive cybersecurity strategies. Implementing encryption, multi-factor authentication, software updates, employee training, and incident response planning creates a robust defense against cyber threats. Both individuals and organizations play a role in cybersecurity, and by adopting these strategies, they can protect their data, maintain privacy, and minimize the impact of cyber attacks. The evolving nature of cyber threats requires ongoing vigilance, but with strong cybersecurity practices in place, individuals and organizations can navigate the digital landscape with greater confidence and security.",
         "tags": ["Cybersecurity", "Safety", "Technology"],
         "imageSource": "/posts/The Importance of Cybersecurity.webp"
+    }
+]
+
+export const teamInfo = [
+    {
+        tId: 'protik0939',
+        tName: 'Md. Sadat Alam Protik',
+        tImage: '/teamMatesImages/sadatalamprotik.webp',
+    },
+    {
+        tId: 'jubairaminsiyum',
+        tName: 'Jubair Amin Siyum',
+        tImage: '/teamMatesImages/jubairaminsiyum.webp',
+    },
+    {
+        tId: 'ishmakrahatrafi',
+        tName: 'Ishmak Rahat Rafi',
+        tImage: '/teamMatesImages/ishmakrahatrafi.webp',
+    },
+    {
+        tId: 'hasanjarif',
+        tName: 'Md. Hasan Jarif',
+        tImage: '/teamMatesImages/hasanjarif.webp',
+    },
+    {
+        tId: 'shakib',
+        tName: 'Shakib',
+        tImage: '/teamMatesImages/shakib.webp',
     }
 ]

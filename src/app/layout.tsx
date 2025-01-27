@@ -15,6 +15,12 @@ const balooDaTwo = Baloo_Da_2({
   variable: '--font-baloo-da-2'
 })
 
+
+export const gscVerification: Metadata = {
+  title: "google-site-verification",
+  description: "eIF-DBTlpUgbA88_sV07lhJiT8iX_luc8VqUGSfG8lc",
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,7 +36,7 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        <meta name="google-site-verification" content="eIF-DBTlpUgbA88_sV07lhJiT8iX_luc8VqUGSfG8lc" />
+        
       </Head>
       <body
         className={` ${balooDaTwo.variable} antialiased`} >

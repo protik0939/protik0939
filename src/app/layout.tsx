@@ -6,6 +6,7 @@ import Head from "next/head";
 
 export const metadata: Metadata = {
   title: "Home | Sadat Alam Protik",
+  verification: { google: "eIF-DBTlpUgbA88_sV07lhJiT8iX_luc8VqUGSfG8lc" },
   description: "Oh, oh woe-oh-woah is me 🖤😉",
   keywords: "Sadat Alam Protik, portfolio, developer, React, Next.js",
   openGraph: {
@@ -48,7 +49,6 @@ export default function RootLayout({
           type="image/<generated>"
           sizes="<generated>"
         />
-        <meta name="google-site-verification" content="eIF-DBTlpUgbA88_sV07lhJiT8iX_luc8VqUGSfG8lc" />
       </Head>
       <body
         className={` ${balooDaTwo.variable} antialiased`} >

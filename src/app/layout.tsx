@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sadat Alam Protik",
     description: "Portfolio of Sadat Alam Protik",
-    url: "https://yourwebsite.com",
+    url: "https://protik0939.vercel.app/",
     siteName: "Sadat's Portfolio",
     images: [
       {

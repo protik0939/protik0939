@@ -44,6 +44,33 @@ export const eduData = [
 
 
 export const projectsInfo = [
+    
+    {
+        pId: 'upgroupasia',
+        pTitle: 'Up Group Asia - Spin & Win',
+        pImgSrc: '/projectsss/upasia.webp',
+        pType: 'Gamified Spin and Win Web Application',
+        pLevel: 'Advance',
+        pLink: 'https://golpro.vercel.app/',
+        pDetails: 'Up Group Asia - Spin & Win is an engaging web application that combines gamification elements with a spin-and-win concept. Users can participate in exciting spin-the-wheel games for a chance to win various prizes and rewards. The application is designed to provide a fun and interactive experience while promoting user engagement and retention. This project was developed as part of my university Software Project course, in collaboration with my friends.',
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'nextjs', 'mysql', 'hostinger' , 'vercel', 'tailwindcss'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/upgroup.svg',
+    },
+    {
+        pId: 'golpro',
+        pTitle: 'GolPro',
+        pImgSrc: '/projectsss/golpro.webp',
+        pType: 'Online OTT Magazine and More',
+        pLevel: 'Advance',
+        pLink: 'https://golpro.vercel.app/',
+        pDetails: 'GolPro is an online OTT magazine platform that offers a wide range of content, including articles, videos, and tutorials on various topics. The platform is designed to provide users with a comprehensive learning experience, focusing on both educational and entertainment content. This project was developed as part of my university Software Project course, in collaboration with my friends.',
+        pMaterials: ['html', 'css', 'javascriptprogramming', 'nextjs', 'nodejs', 'expressjs', 'mongodb', 'vercel', 'tailwindcss'],
+        pCategory: 'Personal Project',
+        pMembers: ['protik0939'],
+        pLogo: '/projectsss/logos/golpro.svg',
+    },
     {
         pId: 'w3university',
         pTitle: 'W3University',
@@ -250,6 +277,18 @@ export const skillData = [
                 logo: '/langlogo/python.webp',
                 percentage: '80',
             },
+            {
+                id: 'php',
+                name: 'PHP',
+                logo: '/langlogo/php.webp',
+                percentage: '70',
+            },
+            {
+                id: 'dart',
+                name: 'Dart',
+                logo: '/langlogo/dart.webp',
+                percentage: '50',
+            }
         ],
     },
     {
@@ -322,6 +361,18 @@ export const skillData = [
                 logo: '/langlogo/nextjs.webp',
                 percentage: '50',
             },
+            {
+                id: 'laravel',
+                name: 'Laravel',
+                logo: '/langlogo/laravel.webp',
+                percentage: '65',
+            },
+            {
+                id: 'flutter',
+                name: 'Flutter',
+                logo: '/langlogo/flutter.webp',
+                percentage: '30',
+            }
         ],
     },
     {

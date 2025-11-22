@@ -13,7 +13,8 @@
     "@react-icons/all-files": "^4.1.0",
     "@react-spring/web": "^9.7.5",
     "framer-motion": "^11.11.9",
-    "next": "^15.1.6",
+    "next": "^16.0.3",
+    "next-intl": "^4.5.3",
     "particles-bg": "^2.5.5",
     "react": "^18",
     "react-dom": "^18",
@@ -21,6 +22,7 @@
     "react-icons": "^5.3.0",
     "react-shuffle-text": "^1.0.6",
     "tailwind-merge": "^2.5.4",
+    "tailwindcss-animate": "^1.0.7",
     "three": "^0.169.0"
   },
   "devDependencies": {
@@ -29,8 +31,8 @@
     "@types/react-dom": "^18",
     "@types/three": "^0.169.0",
     "daisyui": "^4.12.13",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.15",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.3",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

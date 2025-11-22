@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Menu from "@/app/(components)/Menu";
-import { Baloo_Da_2 } from 'next/font/google'
+import { ThemeProvider } from "@/app/(components)/ThemeProvider";
+import ThemeToggle from "@/app/(components)/ThemeToggle";
+import { LanguageProvider } from "@/app/(components)/LanguageProvider";
+import LanguageSwitcher from "@/app/(components)/LanguageSwitcher";
+import Preloader from "@/app/(components)/Preloader";
+import { Baloo_Da_2, Hind_Siliguri } from 'next/font/google'
 import Head from "next/head";
 
 export const metadata: Metadata = {
@@ -34,6 +39,12 @@ const balooDaTwo = Baloo_Da_2({
   variable: '--font-baloo-da-2'
 })
 
+const hindShiliguri = Hind_Siliguri({
+  subsets: ['bengali', 'latin'],
+  weight: ['400', '600', '700'],
+  variable: '--font-hind-shiliguri'
+})
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -51,9 +62,18 @@ export default function RootLayout({
         />
       </Head>
       <body
-        className={` ${balooDaTwo.variable} antialiased`} >
-        <Menu />
-        {children}
+        className={` ${balooDaTwo.variable} ${hindShiliguri.variable} antialiased`} >
+        <ThemeProvider>
+          <LanguageProvider>
+            <Preloader />
+            <div className="flex fixed top-4 pr-4 space-x-4 justify-end w-full z-50">
+              <ThemeToggle />
+              <LanguageSwitcher />
+            </div>
+            <Menu />
+            {children}
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

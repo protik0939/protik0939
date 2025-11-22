@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { TCardProps } from "@/models/typeScript";
+import { useLanguage } from "@/app/(components)/LanguageProvider";
 
 
 export default function Hobby() {
@@ -13,6 +14,8 @@ export default function Hobby() {
     visible: { opacity: 1, filter: 'blur(0px)' }
   };
 
+  const { language } = useLanguage();
+
   return (
     <section className="relative grid min-h-screen w-full place-content-center overflow-hidden bg-none">
       <motion.h2
@@ -20,8 +23,8 @@ export default function Hobby() {
         animate="visible"
         variants={fadeInVariant}
         transition={{ delay: .1, duration: 1 }}
-        className="relative z-0 text-[20vw] font-black text-neutral-800/40 md:text-[200px]">
-        Hobbies
+        className="relative z-0 text-[20vw] font-black text-muted/40 md:text-[200px]">
+        {language === 'en' ? "Hobbies" : "শখসমূহ"}
       </motion.h2>
       <Cards />
     </section>
@@ -30,13 +33,13 @@ export default function Hobby() {
 
 const Cards = () => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-
+  const { language } = useLanguage();
 
   return (
     <div className="absolute inset-0 z-10" ref={containerRef}>
       <Card
         containerRef={containerRef}
-        src="/hobby/anchoring.webp"
+        src={language === 'en' ? "/hobby/anchoring.webp" : "/hobby/anchoringbn.webp"}
         alt="Example image"
         rotate="6deg"
         top="20%"
@@ -45,7 +48,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/hobby/football.webp"
+        src={language === 'en' ? "/hobby/football.webp" : "/hobby/footballbn.webp"}
         alt="Playing Football"
         rotate="12deg"
         top="50%"
@@ -54,7 +57,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/hobby/Cycling copy.webp"
+        src={language === 'en' ? "/hobby/Cycling.webp" : "/hobby/Cyclingbn.webp"}
         alt="Example image"
         rotate="-6deg"
         top="20%"
@@ -63,7 +66,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/hobby/debating.webp"
+        src={language === 'en' ? "/hobby/debating.webp" : "/hobby/debatingbn.webp"}
         alt="Example image"
         rotate="8deg"
         top="60%"
@@ -72,7 +75,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/hobby/listeningmusics.webp"
+        src={language === 'en' ? "/hobby/listeningmusics.webp" : "/hobby/listeningmusicsbn.webp"}
         alt="Example image"
         rotate="18deg"
         top="10%"
@@ -81,7 +84,7 @@ const Cards = () => {
       />
       <Card
         containerRef={containerRef}
-        src="/hobby/mobilephotography.webp"
+        src={language === 'en' ? "/hobby/photography.webp" : "/hobby/photographybn.webp"}
         alt="Example image"
         rotate="-3deg"
         top="60%"

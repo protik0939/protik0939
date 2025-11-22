@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from "framer-motion";
+import { useLanguage } from './LanguageProvider';
 
 type TTitlePropType = {
     title?: string,
@@ -9,6 +10,7 @@ type TTitlePropType = {
 const Titles: React.FC<TTitlePropType> = (props) => {
 
     const { title } = props;
+    const { t } = useLanguage();
 
     const fadeInVariant = {
         hidden: { opacity: 0, filter: 'blur(10px)' },
@@ -23,7 +25,7 @@ const Titles: React.FC<TTitlePropType> = (props) => {
             transition={{ duration: 1 }}
         >
             <div className='text-center font-bold p-2 border-t-2 border-b-2 px-6'>
-                {title}
+                {t(title ?? '')}
             </div>
         </motion.div>
     )

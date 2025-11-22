@@ -2,18 +2,26 @@
 import React, { useEffect, useState } from 'react'
 import { useSpring, animated } from '@react-spring/web'
 import Image from 'next/image';
-import ptk from '../../../public/protikWOutBgg.webp'
+
+import ptk from '../../../public/protikWOutBgg.webp';
+import ptkWhite from '../../../public/protikWOutBggWhite.webp';
+import ptkOcean from '../../../public/protikWOutBggOcean.webp';
+import ptkSunset from '../../../public/protikWOutBggSunset.webp';
+import ptkForest from '../../../public/protikWOutBggForest.webp';
+
 import { GrProjects } from "react-icons/gr";
 import { GiGraduateCap } from "react-icons/gi";
 import { TiInfoLargeOutline } from "react-icons/ti";
 import { CgFeed } from "react-icons/cg";
 import { topBarData } from '@/models/jsonData';
 import dynamic from 'next/dynamic';
+import { useLanguage } from './LanguageProvider';
+import { useTheme } from './ThemeProvider';
 
 const ShuffleText = dynamic(() => import('react-shuffle-text'), { ssr: false });
 
 export default function HomeTopBanner() {
-
+    const { actualTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     const [showText1, setShowText1] = useState(false);
@@ -46,6 +54,26 @@ export default function HomeTopBanner() {
         pause: !mounted
     });
 
+    const { t, language } = useLanguage();
+
+    // Determine image based on current theme
+    const getThemeImage = () => {
+        switch (actualTheme) {
+            case 'light':
+                return ptkWhite;
+            case 'ocean':
+                return ptkOcean;
+            case 'sunset':
+                return ptkSunset;
+            case 'forest':
+                return ptkForest;
+            case 'dark':
+            default:
+                return ptk;
+        }
+    };
+    
+    const currentImage = getThemeImage();
 
     return (
         <div className='relative h-screen w-full flex justify-center items-center'>
@@ -54,10 +82,34 @@ export default function HomeTopBanner() {
                     ...springs,
                 }}
                 className='absolute font-bold flex flex-col items-center w-full top-10 sm:top-5 overflow-hidden'>
-                {showText1 && <div className='text-2xl'><ShuffleText content={topBarData[0].first} /></div>}
-                {showText2 && <div className='text-5xl sm:text-3xl'><ShuffleText content={topBarData[0].second} /></div>}
-                {showText3 && <div className='text-7xl sm:text-5xl'><ShuffleText content={topBarData[0].third} /></div>}
-                {showText4 && <div className='text-9xl sm:text-7xl'><ShuffleText content={topBarData[0].fourth} /></div>}
+                {showText1 && (
+                    <div className="text-2xl text-muted-foreground theme-transition">
+                        {language === 'en'
+                            ? <ShuffleText content={t(topBarData[0].first)} />
+                            : t(topBarData[0].first)}
+                    </div>
+                )}
+                {showText2 && (
+                    <div className='text-5xl sm:text-3xl text-foreground theme-transition'>
+                        {language === 'en'
+                            ? <ShuffleText content={t(topBarData[0].second)} />
+                            : t(topBarData[0].second)}
+                    </div>
+                )}
+                {showText3 && (
+                    <div className='text-7xl sm:text-5xl text-primary theme-transition'>
+                        {language === 'en'
+                            ? <ShuffleText content={t(topBarData[0].third)} />
+                            : t(topBarData[0].third)}
+                    </div>
+                )}
+                {showText4 && (
+                    <div className='text-9xl sm:text-7xl text-accent theme-transition'>
+                        {language === 'en'
+                            ? <ShuffleText content={t(topBarData[0].fourth)} />
+                            : t(topBarData[0].fourth)}
+                    </div>
+                )}
             </animated.div>
 
             <div className='w-full h-full absolute flex items-end justify-center'>
@@ -67,7 +119,7 @@ export default function HomeTopBanner() {
                     }}
                     className=''>
                     {showImage && <Image
-                        src={ptk}
+                        src={currentImage}
                         alt='Protik'
                         width={344}
                         height={533}
@@ -113,7 +165,7 @@ export default function HomeTopBanner() {
 
 
             <div className='w-full h-full absolute z-10'>
-                <div className='absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-black to-transparent' />
+                <div className='absolute w-full h-1/2 bottom-0 bg-gradient-to-t from-background to-transparent' />
             </div>
         </div>
     );

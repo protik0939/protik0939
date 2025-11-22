@@ -1,4 +1,5 @@
 import Blogs from "./(components)/Blogs";
+import { Suspense } from "react";
 
 
 export const metadata = {
@@ -9,6 +10,8 @@ export const metadata = {
 export default function page() {
 
   return (
-    <Blogs />
+    <Suspense fallback={<div>Loading...</div>}>
+      <Blogs />
+    </Suspense>
   )
 }

@@ -3,9 +3,10 @@ import React from 'react'
 import SkillSet from './SkillSet'
 
 export default function LanguagesIKnow() {
+    
     return (
         <div>
-            <Titles title={'Skills'} />
+            <Titles title={'skills'} />
             <SkillSet />
         </div>
     )

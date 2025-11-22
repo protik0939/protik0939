@@ -8,18 +8,19 @@ import Image from "next/image";
 import { IoLogoWhatsapp, IoMailOutline } from "react-icons/io5";
 import { AiOutlineLinkedin, AiOutlineSkype } from "react-icons/ai";
 import { CiFacebook } from "react-icons/ci";
-import { PiGithubLogoThin, PiInstagramLogoThin, PiLastfmLogoThin, PiPinterestLogoThin, PiRedditLogoThin, PiSnapchatLogoThin, PiSpotifyLogoThin, PiTelegramLogoThin, PiTwitchLogoThin, PiYoutubeLogoThin } from "react-icons/pi";
+import { PiGithubLogoThin, PiInstagramLogoThin, PiLastfmLogoThin, PiMicrosoftTeamsLogoLight, PiPinterestLogoThin, PiRedditLogoThin, PiSnapchatLogoThin, PiSpotifyLogoThin, PiTelegramLogoThin, PiTwitchLogoThin, PiYoutubeLogoThin } from "react-icons/pi";
 import { RiTwitterXLine } from "react-icons/ri";
 import { LiaDeviantart } from "react-icons/lia";
 import { DiYahoo } from "react-icons/di";
 import { SlSocialVkontakte } from "react-icons/sl";
 import { TbBrandUnsplash } from "react-icons/tb";
+import { useLanguage } from "@/app/(components)/LanguageProvider";
 
 
 export default function Contact() {
 
 
-
+  const { language } = useLanguage();
 
 
   return (
@@ -71,7 +72,7 @@ const Block = ({ className, ...rest }: BlockProps) => {
         damping: 50,
       }}
       className={twMerge(
-        "col-span-4 rounded-lg border border-zinc-700 bg-zinc-800/10 backdrop-blur-[2px] p-6",
+        "col-span-4 theme-rounded theme-border border-border bg-card/30 backdrop-blur-md p-6 theme-transition hover:theme-shadow",
         className
       )}
       {...rest}
@@ -79,32 +80,35 @@ const Block = ({ className, ...rest }: BlockProps) => {
   );
 };
 
-const HeaderBlock = () => (
-  <Block className="col-span-12 row-span-2 bgg:col-span-6">
-    <div className="flex items-center space-x-4 mb-4">
-      <Image
-        src="/protikWOutBg.webp"
-        alt="avatar"
-        width={100}
-        height={100}
-        className="size-14 rounded-lg"
-      />
-      <div className=" text-2xl font-bold">
-        Let&apos;s Connect!
+const HeaderBlock = () => {
+  const { language } = useLanguage();
+  return (
+    <Block className="col-span-12 row-span-2 bgg:col-span-6">
+      <div className="flex items-center space-x-4 mb-4">
+        <Image
+          src="/protikWOutBg.webp"
+          alt="avatar"
+          width={100}
+          height={100}
+          className="size-14 rounded-lg"
+        />
+        <div className=" text-2xl font-bold text-primary">
+          {language === 'en' ? "Let's Connect!" : "কথা বলা যাক!"}
+        </div>
       </div>
-    </div>
 
-    <div className="text-zinc-400 text-sm">
-      If you&apos;re interested in discussing projects, collaborations, or any professional inquiries, feel free to reach out. I&apos;m always open to connecting with like-minded individuals and new opportunities.
-    </div>
-    <Link
-      href={"tel:+8801721846361"}
-      className="flex items-center gap-1 text-red-300 hover:underline"
-    >
-      Contact me <FiArrowRight />
-    </Link>
-  </Block>
-);
+      <div className="text-muted-foreground text-sm">
+        {language === 'en' ? "If you're interested in discussing projects, collaborations, or any professional inquiries, feel free to reach out. I'm always open to connecting with like-minded individuals and new opportunities." : "কোনো প্রজেক্ট, পারস্পরিক সহযোগিতা (collaboration) বা পেশাগত প্রয়োজনে নির্দ্বিধায় আমার সাথে যোগাযোগ করতে পারেন। সমমনা ব্যক্তি এবং নতুন কাজের সুযোগের প্রতি আমি সবসময়ই আগ্রহী।"}
+      </div>
+      <Link
+        href={"tel:+8801721846361"}
+        className="flex items-center gap-1 text-red-300 hover:underline"
+      >
+        {language === 'en' ? "Contact me" : "যোগাযোগ করুন"} <FiArrowRight />
+      </Link>
+    </Block>
+  );
+};
 
 const Ewls = () => (
   <>
@@ -160,11 +164,11 @@ const Ewls = () => (
       className="col-span-6 bg-[#ffffff10] group backdrop-blur-[2px] bgg:col-span-3 transition-all duration-100 overflow-hidden hover:shadow-lg hover:shadow-white"
     >
       <Link
-        href={"https://join.skype.com/invite/yFTTJ3l3wXM3"}
+        href={"https://teams.microsoft.com/l/chat/0/0?users=protik0939@gmail.com"}
         target="_blank"
         className="grid h-full place-content-center text-3xl text-white"
       >
-        <AiOutlineSkype className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
+        <PiMicrosoftTeamsLogoLight className="group-hover:shadow-xl group-hover:scale-[5] group-hover:-rotate-[2.5deg] transition-all duration-100" />
       </Link>
     </Block>
   </>
@@ -424,39 +428,48 @@ const Others = () => (
   </>
 );
 
-const AboutBlock = () => (
-  <Block className="col-span-12 text-3xl leading-snug">
-    <p className="text-center">
-      Other Social Links
-    </p>
-  </Block>
-);
+const AboutBlock = () => {
+  const { language } = useLanguage();
+  return (
+    <Block className="col-span-12 text-3xl leading-snug">
+      <p className="text-center">
+        {language === 'en' ? "Other Social Links" : "অন্যান্য সামাজিক যোগাযোগ মাধ্যমসমুহ"}
+      </p>
+    </Block>
+  );
+};
 
-const LocationBlock = () => (
-  <Block className="col-span-12 flex flex-col items-center gap-4 bgg:col-span-3">
-    <FiMapPin className="text-3xl" />
-    <p className="text-center text-lg text-zinc-400">Dhaka, Bangladesh</p>
-  </Block>
-);
+const LocationBlock = () => {
+  const { language } = useLanguage();
+  return (
+    <Block className="col-span-12 flex flex-col items-center gap-4 bgg:col-span-3">
+      <FiMapPin className="text-3xl" />
+      <p className="text-center text-lg text-zinc-400">{language === 'en' ? "Dhaka, Bangladesh" : "ঢাকা, বাংলাদেশ"}</p>
+    </Block>
+  );
+};
 
-const EmailListBlock = () => (
-  <Block className="col-span-12 bgg:col-span-9">
-    <p className="mb-3 text-lg">Join my mailing list</p>
-    <form
-      onSubmit={(e) => e.preventDefault()}
-      className="flex items-center gap-2"
-    >
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="w-full rounded border border-zinc-700 bg-zinc-800 px-3 py-1.5 transition-colors focus:border-red-300 focus:outline-0"
-      />
-      <button
-        type="submit"
-        className="flex items-center gap-2 whitespace-nowrap rounded bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-300"
+const EmailListBlock = () => {
+  const { language } = useLanguage();
+  return (
+    <Block className="col-span-12 bgg:col-span-9">
+      <p className="mb-3 text-lg">{language === 'en' ? "Join my mailing list" : "আমার মেইলিং লিস্টে যোগ দিন"}</p>
+      <form
+        onSubmit={(e) => e.preventDefault()}
+        className="flex items-center gap-2"
       >
-        <FiMail /> Join the list
-      </button>
-    </form>
-  </Block>
-);
+        <input
+          type="email"
+          placeholder={language === 'en' ? "Your email address" : "আপনার ইমেইল ঠিকানা"}
+          className="w-full rounded border border-zinc-700 bg-zinc-800 px-3 py-1.5 transition-colors focus:border-red-300 focus:outline-0"
+        />
+        <button
+          type="submit"
+          className="flex items-center gap-2 whitespace-nowrap theme-rounded bg-primary hover:bg-primary/80 px-3 py-2 text-sm font-medium text-primary-foreground theme-transition hover:theme-shadow"
+        >
+          <FiMail /> {language === 'en' ? "Join the list" : "লিস্টে যুক্ত হন"}
+        </button>
+      </form>
+    </Block>
+  );
+};

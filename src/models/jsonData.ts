@@ -114,7 +114,7 @@ export const projectsInfo = [
     pImgSrc: "/projectsss/alphaone.webp",
     pType: "project.aoe.type",
     pLevel: "level.expert",
-    pLink: "https://alphaoneedu.com/",
+    pLink: "https://web.archive.org/web/20250716152154/https://alphaoneedu.com/",
     pDetails: "project.aoe.details",
     pMaterials: [
       "html",

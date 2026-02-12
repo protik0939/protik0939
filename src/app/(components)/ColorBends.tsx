@@ -117,17 +117,17 @@ void main() {
 export default function ColorBends({
   className,
   style,
-  rotation = -172,
+  rotation = -129,
   speed = 0.2,
   colors = [],
   transparent = true,
   autoRotate = -5,
   scale = 1,
-  frequency = .4,
+  frequency = 1,
   warpStrength = 1,
-  mouseInfluence = 1,
-  parallax = 0.5,
-  noise = 1,
+  mouseInfluence = 0,
+  parallax = 0,
+  noise = 0,
   useThemeColors = true
 }: ColorBendsProps) {
   const { actualTheme } = useTheme();

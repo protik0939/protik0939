@@ -8,6 +8,7 @@ import Link from 'next/link'
 import { useLanguage } from '@/app/(components)/LanguageProvider'
 import { IoMdSearch, IoMdClose, IoMdArrowBack, IoMdArrowForward } from 'react-icons/io'
 import { useSearchParams } from 'next/navigation'
+import ThumbnailSlider from './ThumbnailSlider'
 
 export default function Blogs() {
   const searchParams = useSearchParams();
@@ -168,14 +169,18 @@ export default function Blogs() {
                   <Link
                     className="card p-2 theme-shadow theme-transition"
                     href={`/blogs/${encodeURIComponent(b._id)}`} >
-                    <figure>
-                      <Image
-                        src={b.imageSource}
-                        alt="Shoes"
-                        height={1600}
-                        width={900}
-                        className='w-full h-full border border-white border-b-0 rounded-t-2xl '
-                      />
+                    <figure className='w-full h-64 overflow-hidden'>
+                      {b.imageSource.length > 1 ? (
+                        <ThumbnailSlider mediaUrls={b.imageSource} />
+                      ) : (
+                        <Image
+                          src={b.imageSource[0]}
+                          alt="Blog thumbnail"
+                          height={1600}
+                          width={900}
+                          className='w-full h-full object-cover border border-white border-b-0 rounded-t-2xl'
+                        />
+                      )}
                     </figure>
                     <div className="card-body bg-card/30 backdrop-blur-sm rounded-b-xl border theme-border border-border !border-t-0">
                       <h2 className="card-title text-s text-primary">{t(b.title)}</h2>

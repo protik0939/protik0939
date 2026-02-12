@@ -30,5 +30,5 @@ export interface TBlogPost {
     timeToRead: string;
     fullDetails: string;
     tags: string[];
-    imageSource: string;
+    imageSource: string[]; // Array of image URLs or YouTube video URLs
 }

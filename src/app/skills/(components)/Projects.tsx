@@ -120,7 +120,7 @@ export default function Projects(): JSX.Element {
                                                             alt={t(skill.name)}
                                                             width={40}
                                                             height={40}
-                                                            className={`w-16 ${skill.id === 'vercel' || skill.id === 'expressjs' || skill.id === 'nextjs' || skill.id === 'mongodb' || skill.id === 'nodejs' ? 'bg-white/70 rounded-xl p-2' : ''}`}
+                                                            className={`w-16 ${skill.id === 'vercel' || skill.id === 'expressjs' || skill.id === 'nextjs' || skill.id === 'mongodb' || skill.id === 'nodejs' || skill.id === 'prismaorm' ? 'bg-white/70 rounded-xl p-2' : ''}`}
                                                         />
                                                         <span className="text-sm text-white mt-1">{t(skill.name)}</span>
                                                     </div>

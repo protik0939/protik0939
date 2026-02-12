@@ -35,7 +35,7 @@ export default function SkillSet() {
                                                 <div key={si.id} className='w-1/6 p-4 sm:w-1/3 sm:p-2'>
                                                     <div className='relative w-full' style={{ aspectRatio: '1/1' }}>
                                                         <div
-                                                            className={`radial-progress flex items-center justify-center ${si.id === 'vercel' || si.id === 'expressjs' || si.id === 'nextjs' ? 'bg-white/30 rounded-full' : ''}`}
+                                                            className={`radial-progress flex items-center justify-center ${si.id === 'vercel' || si.id === 'expressjs' || si.id === 'nextjs' ||  si.id === 'prismaorm' ? 'bg-white/30 rounded-full' : ''}`}
                                                             style={{ "--value": si.percentage, "--size": "full", "--thickness": "2px", width: '100%', height: '100%' } as React.CSSProperties}
                                                             role="progressbar"
                                                         >

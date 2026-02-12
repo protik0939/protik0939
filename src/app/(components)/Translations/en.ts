@@ -122,6 +122,9 @@ export const en = {
   "skills.mysql.name": "MySQL",
   "skills.mysql.percentage": "78%",
 
+  "skills.postgresql.name": "PostgreSQL",
+  "skills.postgresql.percentage": "90%",
+
   "skills.mongodb.name": "MongoDB",
   "skills.mongodb.percentage": "84%",
 
@@ -139,6 +142,9 @@ export const en = {
 
   "skills.nextjs.name": "Next.js",
   "skills.nextjs.percentage": "80%",
+  
+  "skills.prismaorm.name": "PrismaORM",
+  "skills.prismaorm.percentage": "95%",
 
   "skills.laravel.name": "Laravel",
   "skills.laravel.percentage": "65%",
@@ -257,6 +263,17 @@ export const en = {
   'project.madeUsing': 'Made Using',
   'project.peopleBehindThis': 'People behind this',
 
+
+  "project.foodhub.title": "Food HUB",
+  "project.foodhub.type": "Food Ordering and Selling Platform",
+  "project.foodhub.details":
+    "Foodhub is a full functional food ordering system and selling platform. Here user can order product for them also they can be a food provider and sell food in this platform. Besides this, here's an admin panel who can see and manage all the every things. He can do all kind of CRUD operation even can suspend any user/customer.",
+
+  "project.ekusheycoding.title": "Ekushey Coding",
+  "project.ekusheycoding.type": "Bi-lingual Code Learning Platform",
+  "project.ekusheycoding.details":
+    "Ekushey Coding is a Bilingual learning platform in both Bengali and English so that those who are weak in english can easily learn using our platform. It will be very beginner friendly and easy to learn. Also there is admin login system, using admin can be able to upload contents in this site and manage everything. Admin can upload content in both Bengali and English.",
+
   "project.upgroupasia.title": "Up Group Asia - Spin & Win",
   "project.upgroupasia.type": "Gamified Spin and Win Web Application",
   "project.upgroupasia.details":
@@ -356,6 +373,12 @@ export const en = {
   "blogs.medibot.title": "MediBot",
   "blogs.medibot.fulldetails": "MediBot: Our Smart Line-Following Robot for Modernizing Hospital Healthcare\nBackground:\nThe busy hospital corridors, the relentless rushing of nurses, and the challenge of delivering the right medication to the right patient at the right time—this scene is familiar to us all. Especially since COVID-19, we have realized how crucial it is to minimize human contact in cases of infectious diseases or within isolation wards. To address this problem with a smart and automated solution, we, a group of students from Daffodil International University, have developed \"MediBot\". My friends and I built this line-following robot as part of our \"Embedded Systems and IoT\" project for the Spring 2025 semester.\nOur project has been accepted at the 2025 International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN), and we are thrilled to share the key aspects of our research with everyone today.\nThe Problem:\nResearch shows that medication errors—whether incorrect administration or failure to receive medication on time—are a major cause of deteriorating patient health. This risk is significantly higher for elderly patients or those suffering from dementia. Furthermore, due to the excessive workload on nurses and hospital staff, delays or errors in manual medication distribution are unfortunately common.\nOur Solution: MediBot\nMediBot is a smart line-following robot capable of delivering medication to specific hospital wards or beds completely autonomously. It is not just a robot; rather, it is an IoT-based ecosystem that stays connected with nurses or caregivers in real-time.\nHow Does It Work? (Technical Aspects)\nOur system is primarily composed of three main parts: 1. Navigation System: The robot uses Infrared (IR) sensors and a line-following algorithm for movement. By following a designated path (black line) on the hospital floor, it reaches specific patient beds. 2. Medicine Dispensing Mechanism: There is a hexagonal rotating container on top of the robot. Driven by a servo motor, it rotates to dispense medication from the correct compartment. 3. Communication & Alert System: This is our robot's smartest feature. Upon delivering the medication, it immediately sends a signal to the cloud server via an ESP8266 Wi-Fi module.\nHardware Used:\n• Microcontroller: Arduino Uno (acts as the brain).\n• Connectivity: ESP8266 (Wi-Fi module).\n• Sensors: IR Sensors (for path detection).\n• Motor Driver: L298N and Gear Motors.\n• Power: 12V Li-ion Battery.\nSoftware Stack: We used React.js for the frontend and Node.js for the backend. MongoDB is used as the database. Upon successful medication delivery, notifications are instantly sent to the nurse's or doctor's mobile phone and web dashboard via OneSignal or Firebase.\nWhy is MediBot Unique?\nThere are many smart pillboxes on the market that only provide reminders but do not physically deliver the medicine to the patient. Conversely, there are many line-following robots that merely carry items. MediBot combines these two functions:\n• Fully Automated Delivery: Nurses do not need to walk around carrying medicine.\n• Real-Time Tracking: Whether the medicine arrived on time can be monitored directly in the app.\n• Safe: There is no need for human contact with infectious patients.\n• Accuracy: In our testing phase, it demonstrated an accuracy rate of over 95%.\nFuture Work\nCurrently, this is functioning as a prototype. In the future, we plan to add several more features:\n• Obstacle Avoidance: Using ultrasonic sensors to navigate through crowds without collisions.\n• Elevator Integration: The ability to move from one floor to another.\n• Biometric Security: Ensuring that no one other than the specific patient can access the medication.\n• Temperature Control: A cooling system for sensitive medications like insulin or vaccines.\nResearch Team\nThe tireless hard work of our team is involved in making this project a success:\n• Jubair Amin Siyum\n• Ishmak Rahat Rafi\n• Md. Hasan Jarif Bin Monohor\n• Shakib\n• Md. Sadat Alam Protik\n• Supervisor: Md. Taslim Arif (Senior Lecturer, DIU)\nOur goal is to make healthcare easier and safer through the touch of technology. \nPaper Reference: 2025 International Conference on Quantum Photonics, Artificial Intelligence, and Networking (QPAIN), Rangpur, Bangladesh.\nView more here: <a target=\"_blank\" href=\"https://medibot-medicine-update-info.netlify.app\">https://medibot-medicine-update-info.netlify.app</a>",
   "blogs.medibot.timeToRead": "7 Min",
+
+  
+
+  "blogs.efamilycourt.title": "E-Family Court",
+  "blogs.efamilycourt.fulldetails": "During one of our semesters, my best friend Jubair Amin Siyum approached me one day and asked,\n “I’ve got some work—are you in?”\nCurious, I asked, “What kind of work?”\n He replied, “It’s a government project—an e-Family Court system, something like an online court management platform. The project will be developed through our university. Our Head Sir and Chairman Sir are directly involved, and the student team will be led by Zion Sir.”\nWithout hesitation, I said, “If you’re doing it, I’m in too.”\n Looking back, that decision turned out to be one of the proudest moments of my academic journey.\nSoon after, Siyum and I officially joined the project, along with our friend Emon from another section. What began as a small student initiative gradually evolved into a larger team. Over time, Jihan Bhai and Shafin Bhai joined us, whose experience and guidance added significant strength and direction to the project.\nFor many months, we worked tirelessly—through countless meetings, system design discussions, feature development, bug fixing, data handling, and security considerations. This was not just another software development project; it was the journey of building a nationally significant digital infrastructure for Bangladesh’s judicial system.\nAs a result of this collective effort, a new chapter was added to the history of Bangladesh’s judiciary with the launch of the country’s first e-Family Court.\nThe e-Family Court is a fully integrated Digital Court Management and Case Automation Solution that enables online case filing, digital documentation, and limited online hearings. Its goal is to make judicial services faster, more transparent, and more citizen-friendly, while also promoting a paperless and environmentally sustainable court system.\nThe pilot operation of the system began on November 5 at the Dhaka Family Court, and it is scheduled to start trial operations at the Chattogram Family Court from November 30. The official inauguration took place on November 24, 2024, at the Dhaka District and Sessions Judge Court.\nThe inauguration ceremony was graced by distinguished guests, including Dr. Asif Nazrul, Adviser to the Ministry of Law, Justice and Parliamentary Affairs; Syeda Rizwana Hasan, Adviser to the Ministry of Environment, Forest and Climate Change; Faez Ahmed Taiyyeb, Special Assistant to the Honourable Chief Adviser (ICT); our respected Head Sir Professor Dr. Sheak Rashed Haider Noori; and our Honorable Chairman Sir Dr. Md. Sabur Khan.\nThis project stands as a strong example of a Government–University–Technology Industry collaboration, implemented without direct government funding. The system has already been successfully tested by approximately 250–300 officials from the Judiciary, the Ministry of Law, and the Supreme Court, demonstrating its effectiveness and readiness.\nBeing a part of Bangladesh’s first e-Family Court is a matter of immense pride for me. This project not only enhanced my technical skills but also taught me invaluable lessons in teamwork, responsibility, and the real-world impact of technology in solving national-level challenges.\nEvery member of our team contributed with dedication, patience, and commitment—without which this achievement would not have been possible. Personally, I learned a great deal from my teammates, lessons that will undoubtedly guide and support me throughout my future career.\nFor me, this experience was not merely a project—\nit was a responsibility, an honor, and a unique opportunity to contribute to the digital future of Bangladesh.\n\nNews Source: <a target=\"_blank\" href=\"https://tob.news/bangladesh-launches-first-e-family-court/\">https://tob.news/bangladesh-launches-first-e-family-court/</a>\nNews Video: <a target=\"_blank\" href=\"https://www.youtube.com/watch?v=pJ1Fn9YsGT8\">https://www.youtube.com/watch?v=pJ1Fn9YsGT8</a>\nLive Link: <a target=\"_blank\" href=\"https://efamilycourt.judiciary.gov.bd/\">https://efamilycourt.judiciary.gov.bd/</a>",
+  "blogs.efamilycourt.timeToRead": "4 Min",
   
 
   // Tags
@@ -371,6 +394,27 @@ export const en = {
   "tag.line following robot": "Line Following Robot",
   "tag.medibot": "MediBot",
   "tag.conference paper": "Conference Paper",
+
+  "tag.efamilycourt": "e-Family Court",
+  "tag.digitaljudiciary": "Digital Judiciary",
+  "tag.digitalcourt": "Digital Court",
+  "tag.egovernance": "e-Governance",
+  "tag.digitalbangladesh": "Digital Bangladesh",
+  "tag.judicialinnovation": "Judicial Innovation",
+  "tag.legaltech": "Legal Technology",
+  "tag.courtautomation": "Court Automation",
+  "tag.smartjustice": "Smart Justice",
+  "tag.paperlesscourt": "Paperless Court",
+  "tag.civictechnology": "Civic Technology",
+  "tag.publicserviceinnovation": "Public Service Innovation",
+  "tag.governmentuniversitycollaboration": "Government–University Collaboration",
+  "tag.techforgood": "Technology for Good",
+  "tag.studentinnovation": "Student Innovation",
+  "tag.universityledinnovation": "University-Led Innovation",
+  "tag.softwaredevelopment": "Software Development",
+  "tag.casemanagementsystem": "Case Management System",
+  "tag.digitaltransformation": "Digital Transformation",
+  "tag.futureofjustice": "Future of Justice",
 
   'blogs.searchblogs' : 'Search blogs...',
   'blogs.found': 'found',

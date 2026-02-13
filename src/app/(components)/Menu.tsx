@@ -11,11 +11,15 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import ColorBends from './ColorBends'
 import { useLanguage } from './LanguageProvider'
+import { useTheme } from './ThemeProvider'
+import PixelSnow from '@/components/PixelSnow'
 
 export default function Menu() {
   const { t } = useLanguage()
+  const { actualTheme } = useTheme()
   const [showMenu, setShowMenu] = useState(false)
   const [isNavigating, setIsNavigating] = useState(false)
+  const [snowDensity, setSnowDensity] = useState(0.25)
   const pathname = usePathname()
 
   const menuRef = useRef<HTMLDivElement | null>(null)
@@ -45,6 +49,23 @@ export default function Menu() {
       return () => clearTimeout(timer)
     }
   }, [pathname])
+
+  useEffect(() => {
+    const updateSnowDensity = () => {
+      const width = window.innerWidth
+      if (width < 640) { // mobile
+        setSnowDensity(0.08)
+      } else if (width < 1024) { // tablet
+        setSnowDensity(0.15)
+      } else { // desktop
+        setSnowDensity(0.25)
+      }
+    }
+    
+    updateSnowDensity()
+    window.addEventListener('resize', updateSnowDensity)
+    return () => window.removeEventListener('resize', updateSnowDensity)
+  }, [])
 
   const handleLinkClick = () => {
     setIsNavigating(true)
@@ -126,9 +147,31 @@ export default function Menu() {
 
         </div>
       </div>
-      <div className="fixed bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none -z-50">
-        <ColorBends />
-      </div>
+      {actualTheme !== 'informal' && (
+        <div className="fixed bottom-0 left-0 w-full h-full bg-gradient-to-t from-black/80 to-transparent pointer-events-none -z-50">
+          <ColorBends />
+        </div>
+      )}
+      {actualTheme === 'informal' && (
+        <div className="fixed inset-0 w-full h-full pointer-events-none" style={{ zIndex: -5 }}>
+          <div style={{ width: '100%', height: '100%', position: 'relative' }}>
+            <PixelSnow
+              color="#ffc800"
+              flakeSize={0.005}
+              minFlakeSize={2.25}
+              pixelResolution={2500}
+              speed={0.35}
+              depthFade={20}
+              farPlane={25}
+              brightness={3}
+              gamma={0.65}
+              density={snowDensity}
+              variant="round"
+              direction={190}
+            />
+          </div>
+        </div>
+      )}
     </div>
   )
 }

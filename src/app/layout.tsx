@@ -3,6 +3,7 @@ import "./globals.css";
 import Menu from "@/app/(components)/Menu";
 import { ThemeProvider } from "@/app/(components)/ThemeProvider";
 import ThemeToggle from "@/app/(components)/ThemeToggle";
+import MusicToggle from "@/app/(components)/MusicToggle";
 import { LanguageProvider } from "@/app/(components)/LanguageProvider";
 import LanguageSwitcher from "@/app/(components)/LanguageSwitcher";
 import Preloader from "@/app/(components)/Preloader";
@@ -67,6 +68,7 @@ export default function RootLayout({
           <LanguageProvider>
             <Preloader />
             <div className="flex fixed top-4 pr-4 space-x-4 justify-end w-full z-50">
+              <MusicToggle />
               <ThemeToggle />
               <LanguageSwitcher />
             </div>

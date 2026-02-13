@@ -21,6 +21,7 @@ export const en = {
   "theme.ocean": "Ocean",
   "theme.sunset": "Sunset",
   "theme.forest": "Forest",
+  "theme.informal": "PUBG",
 
   // Theme descriptions
   "theme.light.desc": "Bright and clean",
@@ -29,12 +30,15 @@ export const en = {
   "theme.ocean.desc": "Deep blue sea",
   "theme.sunset.desc": "Warm colors",
   "theme.forest.desc": "Nature green",
+  "theme.informal.desc": "Casual",
 
   // UI
   "ui.selectTheme": "Select Theme",
   "ui.changeTheme": "Change Theme",
   "ui.changeLanguage": "Change Language",
   "ui.language": "Language",
+  "ui.playMusic": "Play Music",
+  "ui.pauseMusic": "Pause Music",
   "ui.viewDetails": "View Details",
   "ui.readMore": "Read More",
   "ui.projectLevel": "Project Level",

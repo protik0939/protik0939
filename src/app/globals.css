@@ -1,4 +1,4 @@
-@import './(components)/preloader.css';
+@import "./(components)/preloader.css";
 
 @tailwind base;
 @tailwind components;
@@ -25,7 +25,6 @@ html[lang="bn"] body {
 html[lang="en"] body {
   font-family: var(--font-baloo-da-2) !important;
 }
-
 
 @layer base {
   /* Light Theme (Default) */
@@ -56,7 +55,7 @@ html[lang="en"] body {
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
-    
+
     /* Theme-specific design variables */
     --theme-font: var(--font-baloo-da-2);
     --theme-radius: 0.5rem;
@@ -91,7 +90,7 @@ html[lang="en"] body {
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    
+
     /* Theme-specific design variables */
     --theme-font: var(--font-baloo-da-2);
     --theme-radius: 0.75rem;
@@ -127,7 +126,7 @@ html[lang="en"] body {
     --chart-4: 210 55% 50%;
     --chart-5: 185 75% 40%;
     --radius: 0.5rem;
-    
+
     /* Theme-specific design variables */
     --theme-font: var(--font-baloo-da-2);
     --theme-radius: 1.5rem;
@@ -163,7 +162,7 @@ html[lang="en"] body {
     --chart-4: 30 85% 55%;
     --chart-5: 350 80% 65%;
     --radius: 0.5rem;
-    
+
     /* Theme-specific design variables */
     --theme-font: var(--font-baloo-da-2);
     --theme-radius: 0.25rem;
@@ -199,7 +198,7 @@ html[lang="en"] body {
     --chart-4: 160 50% 45%;
     --chart-5: 125 70% 55%;
     --radius: 0.5rem;
-    
+
     /* Theme-specific design variables */
     --theme-font: var(--font-baloo-da-2);
     --theme-radius: 1rem;
@@ -207,9 +206,60 @@ html[lang="en"] body {
     --theme-border-width: 3px;
     --theme-transition: 0.3s ease;
   }
+
+  /* Informal Mode - Gaming Theme with warm fiery colors (red/orange/brown/yellow) */
+  .informal {
+    --background: 20 40% 8%;
+    --foreground: 40 90% 88%;
+    --card: 15 45% 12%;
+    --card-foreground: 40 90% 88%;
+    --popover: 15 45% 12%;
+    --popover-foreground: 40 90% 88%;
+    --primary: 15 100% 55%;
+    --primary-foreground: 20 40% 8%;
+    --secondary: 25 35% 18%;
+    --secondary-foreground: 40 90% 88%;
+    --muted: 20 30% 20%;
+    --muted-foreground: 35 60% 65%;
+    --accent: 35 100% 55%;
+    --accent-foreground: 20 40% 8%;
+    --destructive: 0 100% 55%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 25 85% 50%;
+    --input: 20 30% 20%;
+    --ring: 15 100% 55%;
+    --chart-1: 15 100% 55%;
+    --chart-2: 35 100% 55%;
+    --chart-3: 45 95% 50%;
+    --chart-4: 10 90% 50%;
+    --chart-5: 50 100% 50%;
+    --radius: 0.5rem;
+
+    /* Theme-specific design variables - Gaming aesthetic */
+    --theme-font: "Courier New", monospace;
+    --theme-radius: 0.15rem;
+    --theme-shadow:
+      0 0 20px rgb(255 85 0 / 0.5), 0 0 40px rgb(255 140 0 / 0.3),
+      0 8px 32px rgb(0 0 0 / 0.6);
+    --theme-border-width: 2px;
+    --theme-transition: 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* Gaming-specific effects */
+    --glow-primary:
+      0 0 10px rgb(255 60 0 / 0.8), 0 0 20px rgb(255 85 0 / 0.5),
+      0 0 30px rgb(255 110 0 / 0.3);
+    --glow-accent:
+      0 0 10px rgb(255 165 0 / 0.8), 0 0 20px rgb(255 200 0 / 0.5),
+      0 0 30px rgb(255 220 50 / 0.3);
+    --scanline: repeating-linear-gradient(
+      0deg,
+      rgba(255, 140, 0, 0.03) 0px,
+      transparent 1px,
+      transparent 2px,
+      rgba(255, 140, 0, 0.03) 3px
+    );
+  }
 }
-
-
 
 @layer base {
   * {
@@ -302,7 +352,9 @@ html[lang="en"] body {
 
   .theme-elevated:hover {
     transform: translateY(-4px);
-    box-shadow: var(--theme-shadow), 0 8px 16px rgba(0, 0, 0, 0.15);
+    box-shadow:
+      var(--theme-shadow),
+      0 8px 16px rgba(0, 0, 0, 0.15);
   }
 
   /* Responsive theme spacing */
@@ -369,14 +421,15 @@ html[lang="en"] body {
 }
 
 .route-progress-container {
-  animation: progressZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-             progressZoomOut 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.5s;
+  animation:
+    progressZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+    progressZoomOut 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.5s;
 }
 
 .route-progress-circle {
   transform-origin: center;
   filter: drop-shadow(0 0 10px hsl(var(--accent) / 0.6))
-          drop-shadow(0 0 20px hsl(var(--primary) / 0.4));
+    drop-shadow(0 0 20px hsl(var(--primary) / 0.4));
   animation: routeProgress 0.8s cubic-bezier(0.65, 0, 0.35, 1) forwards;
   transition: all var(--theme-transition);
 }
@@ -384,5 +437,294 @@ html[lang="en"] body {
 /* Dark theme enhancements for progress ring */
 .dark .route-progress-circle {
   filter: drop-shadow(0 0 15px hsl(var(--accent) / 0.8))
-          drop-shadow(0 0 25px hsl(var(--primary) / 0.6));
+    drop-shadow(0 0 25px hsl(var(--primary) / 0.6));
+}
+
+/* Informal Mode - Gaming Theme Enhancements */
+.informal {
+  /* Scanline effect overlay */
+  background-image: var(--scanline);
+  background-size: 100% 4px;
+  position: relative;
+}
+
+.informal::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: url("/protikWOutBggPubgBG.webp") center/cover no-repeat fixed;
+  opacity: 1;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.informal body {
+  font-family: "Courier New", monospace, var(--font-baloo-da-2);
+  text-shadow: 0 0 5px rgba(255, 140, 0, 0.3);
+  /* Make body background transparent to show root background */
+  background: transparent !important;
+}
+
+/* Gaming text glow effects */
+.informal .text-primary,
+.informal h1,
+.informal h2,
+.informal h3 {
+  text-shadow: var(--glow-primary);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.informal .text-accent {
+  text-shadow: var(--glow-accent);
+}
+
+/* Gaming card effects */
+.informal .theme-card,
+.informal .theme-elevated {
+  background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(15 50% 8%) 100%);
+  border: 2px solid hsl(var(--border));
+  box-shadow:
+    var(--theme-shadow),
+    inset 0 1px 0 rgba(255, 85, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.informal .theme-card::before,
+.informal .theme-elevated::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 165, 0, 0.15),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.informal .theme-card:hover::before,
+.informal .theme-elevated:hover::before {
+  left: 100%;
+}
+
+/* Gaming button effects */
+.informal button:not(.rounded-full):not([class*="absolute"]),
+.informal .theme-button,
+.informal .theme-button-secondary {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary)) 0%,
+    hsl(10 100% 50%) 100%
+  );
+  border: 2px solid hsl(var(--primary));
+  box-shadow:
+    0 0 15px rgba(255, 85, 0, 0.6),
+    0 4px 8px rgba(0, 0, 0, 0.4);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  clip-path: polygon(
+    8px 0,
+    100% 0,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    0 100%,
+    0 8px
+  );
+  transition: all 0.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.informal button:not(.rounded-full):not([class*="absolute"]):hover,
+.informal .theme-button:hover,
+.informal .theme-button-secondary:hover {
+  box-shadow:
+    var(--glow-primary),
+    0 6px 12px rgba(0, 0, 0, 0.6);
+}
+
+.informal button:not(.rounded-full):not([class*="absolute"]):active {
+  transform: translateY(1px);
+  box-shadow: 0 0 10px rgba(255, 85, 0, 0.9);
+}
+
+/* Gaming borders and dividers */
+.informal .theme-border,
+.informal [class*="border"] {
+  border-color: hsl(var(--border));
+  border-style: solid;
+}
+
+/* Gaming input fields */
+.informal input,
+.informal textarea,
+.informal .theme-input {
+  background: hsl(var(--input));
+  border: 2px solid hsl(var(--border));
+  color: hsl(var(--accent));
+  font-family: "Courier New", monospace;
+  box-shadow:
+    inset 0 2px 8px rgba(0, 0, 0, 0.5),
+    0 0 10px rgba(255, 165, 0, 0.25);
+  clip-path: polygon(
+    6px 0,
+    100% 0,
+    100% calc(100% - 6px),
+    calc(100% - 6px) 100%,
+    0 100%,
+    0 6px
+  );
+}
+
+.informal input:focus,
+.informal textarea:focus,
+.informal .theme-input:focus {
+  outline: none;
+  border-color: hsl(var(--accent));
+  box-shadow:
+    inset 0 2px 8px rgba(0, 0, 0, 0.5),
+    var(--glow-accent);
+}
+
+/* Gaming progress and loading effects */
+.informal .route-progress-circle {
+  filter: drop-shadow(0 0 20px hsl(var(--accent) / 1))
+    drop-shadow(0 0 40px hsl(var(--primary) / 0.8));
+  stroke-width: 4;
+}
+
+/* Glitch effect for headings */
+@keyframes glitch {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+}
+
+.informal h1:hover,
+.informal .text-9xl:hover,
+.informal .text-7xl:hover {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Neon link effects - exclude menu items */
+.informal a:not([class*="tooltip"]),
+.informal .theme-link {
+  color: hsl(var(--accent));
+  text-shadow: var(--glow-accent);
+  text-decoration: none;
+}
+
+.informal a:not([class*="tooltip"])::after,
+.informal .theme-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: hsl(var(--accent));
+  box-shadow: var(--glow-accent);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s;
+}
+
+.informal a:not([class*="tooltip"]):hover::after,
+.informal .theme-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Gaming slider/navigation buttons (rounded arrows) */
+.informal button.rounded-full,
+.informal button[class*="absolute"] {
+  background: rgba(255, 85, 0, 0.15) !important;
+  backdrop-filter: blur(8px);
+  border: 2px solid hsl(var(--primary)) !important;
+  box-shadow: 
+    0 0 12px rgba(255, 85, 0, 0.4),
+    inset 0 0 10px rgba(255, 165, 0, 0.2) !important;
+  transition: all 0.3s ease !important;
+}
+
+.informal button.rounded-full:hover,
+.informal button[class*="absolute"]:hover {
+  background: rgba(255, 85, 0, 0.3) !important;
+  box-shadow: 
+    0 0 20px rgba(255, 85, 0, 0.8),
+    inset 0 0 15px rgba(255, 165, 0, 0.3) !important;
+  border-color: hsl(var(--accent)) !important;
+}
+
+.informal button.rounded-full:active,
+.informal button[class*="absolute"]:active {
+  box-shadow: 
+    0 0 8px rgba(255, 85, 0, 0.6) !important;
+}
+
+/* Share button visibility enhancement */
+.informal button:has(svg) {
+  color: hsl(var(--accent)) !important;
+  text-shadow: 0 0 10px rgba(255, 200, 0, 0.8);
+}
+
+.informal button:has(svg) svg {
+  filter: drop-shadow(0 0 8px rgba(255, 200, 0, 0.9));
+  color: hsl(var(--accent)) !important;
+}
+
+.informal button:has(svg):hover {
+  color: hsl(var(--secondary)) !important;
+  text-shadow: var(--glow-primary);
+}
+
+.informal button:has(svg):hover svg {
+  filter: drop-shadow(0 0 12px rgba(255, 85, 0, 1));
+  color: hsl(var(--secondary)) !important;
+}
+
+/* Gaming badge effects */
+.informal .theme-badge {
+  background: linear-gradient(
+    135deg,
+    hsl(var(--primary) / 0.2) 0%,
+    hsl(var(--accent) / 0.1) 100%
+  );
+  border: 2px solid hsl(var(--primary));
+  box-shadow: 0 0 10px rgba(255, 85, 0, 0.6);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+/* RGB split effect for images in informal mode */
+.informal img {
+  filter: drop-shadow(2px 0 0 rgba(255, 60, 0, 0.6))
+    drop-shadow(-2px 0 0 rgba(255, 200, 0, 0.5));
+  transition: filter 0.3s;
+}
+
+.informal img:hover {
+  filter: drop-shadow(3px 0 0 rgba(255, 60, 0, 0.8))
+    drop-shadow(-3px 0 0 rgba(255, 200, 0, 0.7))
+    drop-shadow(0 0 20px rgba(255, 120, 0, 0.6));
 }

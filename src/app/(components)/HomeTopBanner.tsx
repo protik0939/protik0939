@@ -8,6 +8,7 @@ import ptkWhite from '../../../public/protikWOutBggWhite.webp';
 import ptkOcean from '../../../public/protikWOutBggOcean.webp';
 import ptkSunset from '../../../public/protikWOutBggSunset.webp';
 import ptkForest from '../../../public/protikWOutBggForest.webp';
+import ptkInformal from '../../../public/protikWOutBggPubg.webp';
 
 import { GrProjects } from "react-icons/gr";
 import { GiGraduateCap } from "react-icons/gi";
@@ -67,6 +68,8 @@ export default function HomeTopBanner() {
                 return ptkSunset;
             case 'forest':
                 return ptkForest;
+            case 'informal':
+                return ptkInformal;
             case 'dark':
             default:
                 return ptk;
@@ -80,6 +83,7 @@ export default function HomeTopBanner() {
             <animated.div
                 style={{
                     ...springs,
+                    zIndex: 5,
                 }}
                 className='absolute font-bold flex flex-col items-center w-full top-10 sm:top-5 overflow-hidden'>
                 {showText1 && (
@@ -112,18 +116,26 @@ export default function HomeTopBanner() {
                 )}
             </animated.div>
 
-            <div className='w-full h-full absolute flex items-end justify-center'>
+            <div className={`w-full h-full absolute flex items-end justify-center ${actualTheme === 'informal' ? 'overflow-hidden' : ''}`} style={{ zIndex: 4 }}>
                 <animated.div
                     style={{
                         ...springsImage,
                     }}
-                    className=''>
+                    className={`${
+                        actualTheme === 'informal' 
+                            ? 'absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[100%]' 
+                            : ''
+                    }`}>
                     {showImage && <Image
                         src={currentImage}
                         alt='Protik'
-                        width={344}
-                        height={533}
-                        className='w-auto h-auto'
+                        width={610}
+                        height={300}
+                        className={`${
+                            actualTheme === 'informal'
+                                ? 'absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[90%]'
+                                : 'h-auto w-[400px] sm:w-[100%]'
+                        }`}
                         priority={true}
                     />}
                 </animated.div>

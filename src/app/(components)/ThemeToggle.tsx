@@ -2,12 +2,12 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useTheme } from './ThemeProvider'
 import { useLanguage } from './LanguageProvider'
-import { IoSunnyOutline, IoMoonOutline } from 'react-icons/io5'
+import { IoSunnyOutline, IoMoonOutline, IoGameControllerOutline } from 'react-icons/io5'
 import { MdOutlineComputer } from 'react-icons/md'
 import { GiWaves, GiForest } from 'react-icons/gi'
 import { BsSunset } from 'react-icons/bs'
 
-type Theme = 'light' | 'dark' | 'system' | 'ocean' | 'sunset' | 'forest'
+type Theme = 'light' | 'dark' | 'system' | 'ocean' | 'sunset' | 'forest' | 'informal'
 
 interface ThemeOption {
   name: Theme
@@ -58,6 +58,12 @@ export default function ThemeToggle() {
       label: t('theme.forest'),
       icon: <GiForest />,
       description: t('theme.forest.desc')
+    },
+    {
+      name: 'informal',
+      label: t('theme.informal'),
+      icon: <IoGameControllerOutline />,
+      description: t('theme.informal.desc')
     }
   ]
 

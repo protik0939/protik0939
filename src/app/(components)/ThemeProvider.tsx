@@ -1,8 +1,8 @@
 'use client'
 import React, { createContext, useContext, useEffect, useState, useMemo } from 'react'
 
-type Theme = 'light' | 'dark' | 'system' | 'ocean' | 'sunset' | 'forest'
-type ActualTheme = 'light' | 'dark' | 'ocean' | 'sunset' | 'forest'
+type Theme = 'light' | 'dark' | 'system' | 'ocean' | 'sunset' | 'forest' | 'informal'
+type ActualTheme = 'light' | 'dark' | 'ocean' | 'sunset' | 'forest' | 'informal'
 
 interface ThemeContextType {
   theme: Theme
@@ -29,7 +29,7 @@ export function ThemeProvider({ children }: Readonly<{ children: React.ReactNode
     localStorage.setItem('theme', theme)
 
     const root = document.documentElement
-    root.classList.remove('light', 'dark', 'ocean', 'sunset', 'forest')
+    root.classList.remove('light', 'dark', 'ocean', 'sunset', 'forest', 'informal')
 
     if (theme === 'system') {
       const systemTheme = globalThis.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'

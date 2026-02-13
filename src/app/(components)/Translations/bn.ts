@@ -21,6 +21,7 @@ export const bn = {
   "theme.ocean": "সাগর",
   "theme.sunset": "সূর্যাস্ত",
   "theme.forest": "বন",
+  "theme.informal": "পাবজি",
 
   // Theme descriptions
   "theme.light.desc": "উজ্জ্বল এবং পরিষ্কার",
@@ -29,12 +30,15 @@ export const bn = {
   "theme.ocean.desc": "গভীর নীল সাগর",
   "theme.sunset.desc": "উষ্ণ রং",
   "theme.forest.desc": "প্রকৃতির সবুজ",
+  "theme.informal.desc": "ক্যাজুয়াল",
 
   // UI
   "ui.selectTheme": "থিম নির্বাচন করুন",
   "ui.changeTheme": "থিম পরিবর্তন করুন",
   "ui.changeLanguage": "ভাষা পরিবর্তন করুন",
   "ui.language": "ভাষা",
+  "ui.playMusic": "গান চালু করুন",
+  "ui.pauseMusic": "গান বন্ধ করুন",
   "ui.viewDetails": "বিস্তারিত দেখুন",
   "ui.readMore": "আরও পড়ুন",
   "ui.projectLevel": "প্রজেক্ট লেভেল",

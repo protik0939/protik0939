@@ -30,6 +30,9 @@ export default function HomeTopBanner() {
     const [showText3, setShowText3] = useState(false);
     const [showText4, setShowText4] = useState(false);
     const [showImage, setShowImage] = useState(false);
+    const [isImageTransitioning, setIsImageTransitioning] = useState(false);
+    const [displayedTheme, setDisplayedTheme] = useState(actualTheme);
+    const [prevTheme, setPrevTheme] = useState(actualTheme);
 
     useEffect(() => {
         setTimeout(() => setShowText1(true), 0);
@@ -39,6 +42,28 @@ export default function HomeTopBanner() {
         setTimeout(() => setMounted(true), 900);
         setTimeout(() => setShowImage(true), 1200);
     }, []);
+
+    // Handle theme change for image transition
+    useEffect(() => {
+        if (prevTheme !== actualTheme && showImage) {
+            setIsImageTransitioning(true);
+            
+            // Fade out and switch (500ms to match theme fade out)
+            setTimeout(() => {
+                setDisplayedTheme(actualTheme);
+                setPrevTheme(actualTheme);
+                
+                // Fade in complete (800ms to match theme fade in)
+                setTimeout(() => {
+                    setIsImageTransitioning(false);
+                }, 800);
+            }, 500);
+        } else if (!showImage) {
+            // Initial load
+            setDisplayedTheme(actualTheme);
+            setPrevTheme(actualTheme);
+        }
+    }, [actualTheme, showImage, prevTheme]);
 
     const springs = useSpring({
         from: { y: 20 },
@@ -58,8 +83,8 @@ export default function HomeTopBanner() {
     const { t, language } = useLanguage();
 
     // Determine image based on current theme
-    const getThemeImage = () => {
-        switch (actualTheme) {
+    const getThemeImage = (theme: typeof actualTheme) => {
+        switch (theme) {
             case 'light':
                 return ptkWhite;
             case 'ocean':
@@ -76,7 +101,7 @@ export default function HomeTopBanner() {
         }
     };
     
-    const currentImage = getThemeImage();
+    const currentImage = getThemeImage(displayedTheme);
 
     return (
         <div className='relative h-screen w-full flex justify-center items-center'>
@@ -116,28 +141,36 @@ export default function HomeTopBanner() {
                 )}
             </animated.div>
 
-            <div className={`w-full h-full absolute flex items-end justify-center ${actualTheme === 'informal' ? 'overflow-hidden' : ''}`} style={{ zIndex: 4 }}>
+            <div className={`w-full h-full absolute flex items-end justify-center ${displayedTheme === 'informal' ? 'overflow-hidden' : ''}`} style={{ zIndex: 4 }}>
                 <animated.div
                     style={{
                         ...springsImage,
                     }}
                     className={`${
-                        actualTheme === 'informal' 
+                        displayedTheme === 'informal' 
                             ? 'absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[100%]' 
                             : ''
                     }`}>
-                    {showImage && <Image
-                        src={currentImage}
-                        alt='Protik'
-                        width={610}
-                        height={300}
-                        className={`${
-                            actualTheme === 'informal'
-                                ? 'absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[90%]'
-                                : 'h-auto w-[400px] sm:w-[100%]'
-                        }`}
-                        priority={true}
-                    />}
+                    {showImage && (
+                        <div className="relative">
+                            <Image
+                                src={currentImage}
+                                alt='Protik'
+                                width={610}
+                                height={300}
+                                className={`${
+                                    displayedTheme === 'informal'
+                                        ? 'absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] sm:w-[90%]'
+                                        : 'h-auto w-[400px] sm:w-[100%]'
+                                } ${
+                                    isImageTransitioning 
+                                        ? `image-transition-${displayedTheme}` 
+                                        : ''
+                                }`}
+                                priority={true}
+                            />
+                        </div>
+                    )}
                 </animated.div>
             </div>
 

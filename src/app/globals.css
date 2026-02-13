@@ -1,4 +1,5 @@
 @import "./(components)/preloader.css";
+@import "./(components)/theme-transitions.css";
 
 @tailwind base;
 @tailwind components;

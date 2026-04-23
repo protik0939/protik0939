@@ -9,6 +9,10 @@
 <div align="center">
 
 ### `< Building the future, one commit at a time />`
+<a href="https://protik0939.vercel.app/" target="_blank">
+  <img src="https://img.shields.io/badge/Visit%20Portfolio-6B46C1?style=for-the-badge&logo=vercel&logoColor=white" />
+</a>
+
 
 </div>
 
@@ -195,7 +199,7 @@ const protik = {
 
 <div align="center">
 
-![](https://quotes-github-readme.vercel.app/api?type=vertical&theme=tokyonight)
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 </div>
 
@@ -211,7 +215,7 @@ const protik = {
 
 ---
 
-## 🐍 Contribution Snake
+## <img src="https://www.svgrepo.com/show/448242/snake.svg" width="25" /> Contribution Snake
 
 <div align="center">
 

@@ -215,7 +215,7 @@ const protik = {
 
 ---
 
-## <img src="https://www.svgrepo.com/show/448242/snake.svg" width="25" /> Contribution Snake
+## 🐍 Contribution Snake
 
 <div align="center">
 
